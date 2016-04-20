@@ -1,0 +1,28 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+<script src="../js/MainController.js"></script>
+<link rel="stylesheet" type="text/css" href="../css/Main.css">
+</head>
+<body>
+<div class="filter_pane">
+<div class="tournament_filter">
+<input type="button" class="button_tournament" value="Premier">
+<input type="button" class="button_tournament" value="Major">
+<input type="button" class="button_tournament" value="Minor">
+</div>
+<div class="team_filter">
+<label>Search team</label><input type="text" class="textbox_teamsearch" value="Search team">
+</div>
+</div>
+<div class="main_pane" ng-app="mainApp" ng-controller="mainCtrl">
+<div class="major_entry" ng-repeat="t in tourneys" ng-hide="showMajorDetails" ng-click="click(t)">
+{{t}}
+</div>
+<div class="major_details" ng-show="showMajorDetails">
+TA DA!!! {{tourneyClicked}}
+<button class="btn_back" ng-click="backMain()">Back</button>
+</div>
+</div>
+</body>
+</html>

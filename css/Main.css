@@ -1,0 +1,70 @@
+body {
+	background-color:lightgrey; 
+	margin-left:auto; 
+	margin-right:auto;
+}
+.main_pane{
+	width:900px;
+	height:700px;
+	background-color:lightgrey;
+	margin-left:auto; 
+	margin-right:auto;
+}
+
+.filter_pane{
+	width:900px;
+	height:80px;
+	background-color:white;
+	margin-left:auto; 
+	margin-right:auto;
+	margin-bottom: 15px;
+	border-style:solid;
+	border-color:orange;
+	border-width:1px;
+}
+
+.tournament_filter{
+	width:900px;
+	height:40px;
+	background-color:lightblue;
+}
+
+.team_filter{
+	width:900px;
+	height:40px;
+	background-color:lightgreen;
+}
+
+.button_tournament{
+	width:70px;
+	height:30px;
+}
+
+.textbox_teamsearch{
+	width:140px;
+	height:30px;
+	margin-left:15px;
+}
+
+.major_entry {
+	background-color:white; 
+	width:900px; 
+	height:120px; 
+	margin-left:auto; 
+	margin-right:auto; 
+	margin-bottom:10px; 
+	border-style:solid;
+	border-color:black;
+	border-width:1px;
+}
+.major_details {
+	background-color:white; 
+	width:900px;
+	height:700px; 
+	margin-left:auto; 
+	margin-right:auto;
+}
+.btn_back {
+	width:50px; 
+	height:25px;
+}

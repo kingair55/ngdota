@@ -11,7 +11,7 @@ app.config(['$routeProvider', function($routeProvider){
 }]);
 
 app.controller('ListTournamentsController', function($scope, $location){
-    var obj1 = {tournamentId:11, tournamentName:'Frankfurt major', imageSource:'http://hydra-media.cursecdn.com/dota2.gamepedia.com/archive/0/0a/20160218172905%21Minibanner_Dota_2_Major_Winter_2016.jpg'};
+    var obj1 = {tournamentId:11, tournamentName:'Frankfurt major', imageSource:'http://wiki.teamliquid.net/commons/images/3/3b/Frankfurt_Major_Banner.png'};
     var obj2 = {tournamentId:22, tournamentName:'Shanghai major', imageSource:'http://hydra-media.cursecdn.com/dota2.gamepedia.com/archive/0/0a/20160218172905%21Minibanner_Dota_2_Major_Winter_2016.jpg'};
     var obj3 = {tournamentId:33, tournamentName:'Manila major', imageSource:'http://hydra-media.cursecdn.com/dota2.gamepedia.com/archive/0/0a/20160218172905%21Minibanner_Dota_2_Major_Winter_2016.jpg'};
     var obj4 = {tournamentId:44, tournamentName:'The International', imageSource:'http://hydra-media.cursecdn.com/dota2.gamepedia.com/archive/0/0a/20160218172905%21Minibanner_Dota_2_Major_Winter_2016.jpg'};

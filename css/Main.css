@@ -59,8 +59,7 @@ body {
 }
 
 .image_tournament_entry_div{
-    background-color:lavender;
-    width:300px;
+    width:200px;
     height:120px;
     float:left;
     position:relative;
@@ -73,12 +72,28 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
+	max-width:140px;
+	max-height:80px;
 }
 
-.info_tournament_entry{
-    background-color:powderblue;
-    width:600px;
+.tournament_entry_name_div{
+    width:400px;
     height:120px;
+    float:left;
+    position:relative;
+}
+
+.tournament_entry_name{
+    line-height:120px;
+    margin-left:60px;
+    font-size: 170%;
+    font-family: "Segoe UI";
+}
+
+.tournament_entry_info_div{
+    width:300px;
+    height:120px;
+    background-color: bisque;
     float:left;
 }
 

@@ -1,0 +1,10 @@
+<div class="main_pane" ng-controller="ListTournamentsController">
+	<div class="tournament_entry" ng-repeat="t in tourneys" ng-click="viewTournament(t.tournamentName)">
+		<div class="image_tournament_entry_div">
+            <img class="image_tournament_entry" ng-src="{{t.imageSource}}">
+        </div>
+		<div class="info_tournament_entry">
+            {{t.tournamentName}}
+        </div>
+	</div>
+</div>

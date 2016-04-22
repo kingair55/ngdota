@@ -1,0 +1,7 @@
+<div class="tournament_details" ng-controller="ViewTournamentController">
+    Welcome to {{tournamentName}} tournament
+    <button class="btn_back" ng-click="backToListTournament()">Back</button>
+    <div class="match_entry" ng-repeat="m in matches" ng-click="viewMatch(m)">
+        {{m.matchName}}
+    </div>
+</div>

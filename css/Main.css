@@ -52,7 +52,11 @@ body {
 .team_filter{
     width:900px;
     height:40px;
-    background-color:lightgreen;
+    background-color:white;
+    border-style:solid;
+    border-color:darkgray;
+    border-width:1px;
+    line-height: 40px;
 }
 
 .button_tournament{
@@ -66,13 +70,14 @@ body {
     border-width: 1px;
     border-color: gray;
     border-style: solid;
-    background-color: white;
+    background-color: lightgray;
 }
 
 .textbox_teamsearch{
     width:140px;
     height:30px;
     margin-left:15px;
+    margin-top: 0;
 }
 
 .main_pane{
@@ -155,25 +160,30 @@ body {
 }
 
 .tournament_details {
-	background-color:white;
+    background-color:lightgrey;
 	width:900px;
 	height:700px; 
 	margin-left:auto; 
 	margin-right:auto;
+    overflow: hidden;
 }
 
 .btn_back {
 	width:50px; 
 	height:25px;
+    margin-left: 10px;
 }
 
 .match_entry{
-	background-color:lightgreen;
+	background-color:white;
 	width:900px;
 	height:120px;
 	margin-left:auto;
 	margin-right:auto;
 	margin-bottom:10px;
+    border-style:solid;
+    border-color:darkgray;
+    border-width:1px;
 }
 
 .match_details {

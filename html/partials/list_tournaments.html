@@ -1,4 +1,11 @@
 <div class="main_pane" ng-controller="ListTournamentsController">
+    <div class="filter_pane">
+        <div class="tournament_filter">
+            <input type="button" class="button_tournament" value="Premier">
+            <input type="button" class="button_tournament" value="Major">
+            <input type="button" class="button_tournament" value="Minor">
+        </div>
+    </div>
 	<div class="tournament_entry" ng-repeat="t in tourneys" ng-click="viewTournament(t.tournamentName)">
 		<div class="image_tournament_entry_div">
             <img class="image_tournament_entry" ng-src="{{t.imageSource}}">
@@ -7,7 +14,15 @@
             <span class="tournament_entry_name">{{t.tournamentName}}</span>
         </div>
         <div class="tournament_entry_info_div">
-
+            <div class="info_match_count_div">
+                30 matches
+            </div>
+            <div class="info_duration_div">
+                June 1 - June 10
+            </div>
+            <div class="info_venue_div">
+                Mall of Asia Arena
+            </div>
         </div>
 	</div>
 </div>

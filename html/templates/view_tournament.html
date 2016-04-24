@@ -1,4 +1,8 @@
 <div class="tournament_details" ng-controller="ViewTournamentController">
+    <div class="team_filter">
+        <label>Search team</label><input type="text" class="textbox_teamsearch" value="Search team">
+    </div>
+
     Welcome to {{tournamentName}} tournament
     <button class="btn_back" ng-click="backToListTournament()">Back</button>
     <div class="match_entry" ng-repeat="m in matches" ng-click="viewMatch(m)">

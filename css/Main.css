@@ -1,49 +1,86 @@
 body {
-	background-color:lightgrey; 
-	margin-left:auto; 
-	margin-right:auto;
+	background-color:lightgrey;
 }
+
+.head_strip{
+	width:100%;
+	height:50px;
+	background-color:white;
+	margin-bottom:5px;
+    border-style:solid;
+    border-color:darkgray;
+    border-width:1px;
+}
+
+.site_title_div{
+	width:900px;
+	height:50px;
+	margin-left:auto;
+	margin-right:auto;
+	line-height:50px;
+}
+
+.site_title{
+    font-size: 150%;
+    font-family: "Segoe UI";
+}
+
+.content_pane{
+    width:900px;
+    margin-left:auto;
+    margin-right:auto;
+    overflow: hidden;
+}
+
+.filter_pane{
+    width:900px;
+    height:40px;
+    background-color:white;
+    margin-bottom: 10px;
+    clear: both;
+}
+
+.tournament_filter{
+    width:900px;
+    height:40px;
+    background-color:white;
+    border-style:solid;
+    border-color:darkgray;
+    border-width:1px;
+}
+
+.team_filter{
+    width:900px;
+    height:40px;
+    background-color:lightgreen;
+}
+
+.button_tournament{
+    width:70px;
+    height:30px;
+    margin-top:5px;
+    margin-bottom:5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 6px;
+    border-width: 1px;
+    border-color: gray;
+    border-style: solid;
+    background-color: white;
+}
+
+.textbox_teamsearch{
+    width:140px;
+    height:30px;
+    margin-left:15px;
+}
+
 .main_pane{
 	width:900px;
 	height:700px;
 	background-color:lightgrey;
-	margin-left:auto; 
-	margin-right:auto;
-}
-
-.filter_pane{
-	width:900px;
-	height:80px;
-	background-color:white;
-	margin-left:auto; 
-	margin-right:auto;
-	margin-bottom: 15px;
-	border-style:solid;
-	border-color:orange;
-	border-width:1px;
-}
-
-.tournament_filter{
-	width:900px;
-	height:40px;
-	background-color:lightblue;
-}
-
-.team_filter{
-	width:900px;
-	height:40px;
-	background-color:lightgreen;
-}
-
-.button_tournament{
-	width:70px;
-	height:30px;
-}
-
-.textbox_teamsearch{
-	width:140px;
-	height:30px;
-	margin-left:15px;
+    overflow: hidden;
+    clear: both;
 }
 
 .tournament_entry {
@@ -93,8 +130,28 @@ body {
 .tournament_entry_info_div{
     width:300px;
     height:120px;
-    background-color: bisque;
     float:left;
+    font-family: "Segoe UI";
+}
+
+.info_match_count_div{
+    width:300px;
+    height:40px;
+    line-height: 40px;
+    font-family: "Segoe UI";
+}
+
+.info_duration_div{
+    width:300px;
+    height:40px;
+    line-height: 40px;
+    font-family: "Segoe UI";
+}
+
+.info_venue_div{
+    width:300px;
+    height:40px;
+    line-height: 40px;
 }
 
 .tournament_details {

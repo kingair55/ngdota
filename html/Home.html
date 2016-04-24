@@ -6,22 +6,12 @@
 <link rel="stylesheet" type="text/css" href="../css/Main.css">
 </head>
 <body ng-app="mainApp">
-<div class="filter_pane">
-	<div class="tournament_filter">
-		<input type="button" class="button_tournament" value="Premier">
-		<input type="button" class="button_tournament" value="Major">
-		<input type="button" class="button_tournament" value="Minor">
-	</div>
-	<div class="team_filter">
-		<label>Search team</label><input type="text" class="textbox_teamsearch" value="Search team">
-	</div>
-</div>
-<div ng-view>
-	<div class="main_pane" ng-controller="ListTournamentsController">
-		<div class="tournament_entry" ng-repeat="t in tourneys" ng-click="viewTournament(t)">
-			{{t}}
-		</div>
-	</div>
-</div>
+    <div class="head_strip">
+        <div class="site_title_div">
+            <span class="site_title">ng-dota</span>
+        </div>
+    </div>
+    <div class="content_pane" ng-view>
+    </div>
 </body>
 </html>

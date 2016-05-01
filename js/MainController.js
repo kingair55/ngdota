@@ -28,19 +28,45 @@ app.controller('ViewTournamentController', function($scope, $routeParams, $locat
 	};
 
     var intervalPromise;
-    //$scope.matches=['Team Secret vs Evil Geniuses','Fnatic v Mineski','OG vs Liquid', 'EHOME vs Vici Gaming'];
-    var obj1 = { matchId: 1111, team1:{name:'Team Liquid', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'}, team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'}, schedule:(new Date(2016, 4, 5)).getTime(), stage:'Upper Bracket - Main event' };
-    var obj2 = { matchId: 2222, team1:{name:'Team LoooooooooooongNameeeeeeeeeeeeeeeee', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'}, team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'}, schedule:(new Date(2016, 4, 10)).getTime(), stage:'Lower Bracket - Main event' };
-    var obj3 = { matchId: 3333, team1:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'}, team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'}, schedule:(new Date(2016, 4, 15)).getTime(), stage:'Group stage' };
-    var obj4 = { matchId: 4444, team1:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'}, team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'}, schedule:(new Date(2016, 4, 22)).getTime(), stage:'Qualifiers - 2nd round' };
+
+    var obj1 = {
+        matchId: 1111,
+        team1:{name:'Team Liquid', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        schedule:(new Date(2016, 4, 5)).getTime(),
+        stage:'Upper Bracket - Main event',
+        countdown:""
+    };
+    var obj2 = {
+        matchId: 2222,
+        team1:{name:'Team LoooooooooooongNameeeeeeeeeeeeeeeee', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        schedule:(new Date(2016, 4, 10)).getTime(),
+        stage:'Lower Bracket - Main event',
+        countdown:""
+    };
+    var obj3 = {
+        matchId: 3333,
+        team1:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        schedule:(new Date(2016, 4, 15)).getTime(),
+        stage:'Group stage',
+        countdown:""
+    };
+    var obj4 = {
+        matchId: 4444,
+        team1:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        schedule:(new Date(2016, 4, 22)).getTime(),
+        stage:'Qualifiers - 2nd round',
+        countdown:""
+    };
     $scope.matches = [obj1, obj2, obj3, obj4];
 
-    $scope.countdownList =[{countdown:"blah"}, {countdown:"blah"}, {countdown:"blah"}, {countdown:"blah"}];
     $scope.updateTime = function(){
         for(var x = 0; x < $scope.matches.length; x++)
         {
             var timeDifference = ($scope.matches[x].schedule - Date.now()) / 1000;
-            debugger;
             var rawDays = timeDifference / (60 * 60 * 24);
             var daysLeft = rawDays >= 1 ? Math.floor(rawDays) : 0;
             var rawHours = daysLeft > 0 ? (rawDays - daysLeft) * 24 : rawDays * 24;
@@ -57,7 +83,7 @@ app.controller('ViewTournamentController', function($scope, $routeParams, $locat
                 return;
             }
 
-            $scope.countdownList[x].countdown = (daysLeft == 0 ? "" : daysLeft + 'D ')  + (hoursLeft == 0 ? "" : hoursLeft + 'H ') + (minutesLeft == 0 ? "" : minutesLeft + 'M ') + (secondsLeft == 0 ? "" : secondsLeft + 'S');
+            $scope.matches[x].countdown = (daysLeft == 0 ? "" : daysLeft + 'D ')  + (hoursLeft == 0 ? "" : hoursLeft + 'H ') + (minutesLeft == 0 ? "" : minutesLeft + 'M ') + (secondsLeft == 0 ? "" : secondsLeft + 'S');
         }
     }
 

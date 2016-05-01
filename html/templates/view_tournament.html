@@ -9,9 +9,18 @@
     <div class="match_entry" ng-repeat="m in matches" ng-click="viewMatch(m)">
         <div class="match_team1_icon_div"><img class="match_team1_icon" ng-src="{{m.team1.icon}}"></div>
         <div class="match_team_versus_div">
-            <span class="match_team_versus_label">{{m.team1.name}} -- {{m.team2.name}}</span>
+            <div class="match_team1_name_div"><span class="match_team1_name">{{m.team1.name}}</span></div>
+            <div class="match_team_separator_div"><span class="match_team_separator">vs.</span></div>
+            <div class="match_team2_name_div"><span class="match_team2_name">{{m.team2.name}}</span></div>
         </div>
         <div class="match_team2_icon_div"><img class="match_team2_icon" ng-src="{{m.team2.icon}}"></div>
-        <div class="match_entry_info"></div>
+        <div class="match_entry_info">
+            <div class="match_schedule_remaining_div">
+                <span class="match_schedule_remaining">{{m.countdown}}</span>
+            </div>
+            <div class="match_stage_div">
+                <span class="match_stage">{{m.stage}}</span>
+            </div>
+        </div>
     </div>
 </div>

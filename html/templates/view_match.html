@@ -1,4 +1,29 @@
 <div class="match_details" ng-controller="ViewMatchController">
-    {{match}} match
-    <button class="btn_back" ng-click="backToViewTournament()">Back</button>
+    <div class="match_details_title_strip1">
+        <div class="match_details_tournament_div">
+            <span class="match_details_tournament_name">{{tournamentName}}</span>
+        </div>
+        <div class="match_details_schedule_div">
+            <span class="match_schedule_remaining">{{match.countdown}}</span>
+        </div>
+    </div>
+    <div class="match_details_title_strip2">
+        <div class="match_details_matchname_div">
+            <div class="match_details_team1_icon_div"><img class="match_details_team1_icon" ng-src="{{match.team1.icon}}"></div>
+            <div class="match_details_team_versus_div">
+                <div class="match_details_team1_name_div"><span class="match_details_team1_name">{{match.team1.name}}</span></div>
+                <div class="match_details_team_separator_div"><span class="match_details_team_separator">vs.</span></div>
+                <div class="match_details_team2_name_div"><span class="match_details_team2_name">{{match.team2.name}}</span></div>
+            </div>
+            <div class="match_details_team2_icon_div"><img class="match_details_team2_icon" ng-src="{{match.team2.icon}}"></div>
+        </div>
+        <div class="match_stage_div">
+            <span class="match_stage">{{match.stage}}</span>
+        </div>
+    </div>
+    <div>
+        <iframe src="https://player.twitch.tv/?channel=beyondthesummit" frameborder="0" scrolling="no" height="378" width="620" allowFullScreen="true"></iframe>
+        <iframe src="https://www.twitch.tv/beyondthesummit/chat?popout=" frameborder="0" scrolling="no" height="500" width="350" allowFullScreen="true"></iframe>
+    </div>
+    <!--<button class="btn_back" ng-click="backToViewTournament()">Back</button>-->
 </div>

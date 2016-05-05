@@ -297,11 +297,12 @@ body {
 
 .match_stage_div{
     width:270px;
-    height:60px;
-    line-height:60px;
+    height:70px;
+    line-height:70px;
     display: inline-block;
     text-align: center;
     font-size: 120%;
+    float:left;
 }
 
 .match_details {
@@ -310,4 +311,137 @@ body {
 	height:700px;
 	margin-left:auto;
 	margin-right:auto;
+}
+
+.match_details_title_strip1{
+    width:900px;
+    height:50px;
+    clear:both;
+}
+
+.match_details_tournament_div{
+    width:630px;
+    height:50px;
+    background-color: darkseagreen;
+    float:left;
+}
+
+.match_details_schedule_div{
+    width:270px;
+    height:50px;
+    float:left;
+}
+
+.match_details_schedule_div{
+    width:270px;
+    height:50px;
+    float:left;
+    line-height:50px;
+    display: inline-block;
+    text-align: center;
+    font-size: 120%
+}
+
+.match_details_title_strip2{
+    width:900px;
+    height:70px;
+    clear:both;
+}
+
+.match_details_matchname_div{
+    width:630px;
+    height:70px;
+    float:left;
+}
+
+.match_details_team1_icon_div{
+    width: 100px;
+    height:70px;
+    float:left;
+    position:relative;
+}
+
+.match_details_team1_icon{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width:70px;
+    max-height:70px;
+}
+
+.match_details_team2_icon_div{
+    width: 100px;
+    height:70px;
+    float:left;
+    position:relative;
+}
+
+.match_details_team2_icon{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    max-width:70px;
+    max-height:70px;
+}
+
+.match_details_team_versus_div{
+    width: 430px;
+    height:70px;
+    float:left;
+}
+
+.match_details_team1_name_div{
+    width: 200px;
+    height:70px;
+    line-height:70px;
+    float:left;
+}
+
+.match_details_team1_name{
+    font-family:"Segoe UI";
+    font-size:150%;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    max-width:190px;
+    display:inline-block;
+    float:left;
+    margin-right: 10px;
+}
+
+.match_details_team2_name_div{
+    width: 200px;
+    height:70px;
+    line-height:70px;
+    float:right;
+}
+
+.match_details_team2_name{
+    font-family:"Segoe UI";
+    font-size:150%;
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    max-width:190px;
+    display:inline-block;
+    float:right;
+    margin-left: 10px;
+}
+
+.match_details_team_separator_div{
+    width:30px;
+    height:70px;
+    line-height:70px;
+    float:left;
+}
+
+.match_details_team_separator{
+    font-family:"Segoe UI";
+    font-size:150%;
 }

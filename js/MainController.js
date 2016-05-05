@@ -33,7 +33,7 @@ app.controller('ViewTournamentController', function($scope, $routeParams, $locat
         matchId: 1111,
         team1:{name:'Team Liquid', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
         team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
-        schedule:(new Date(2016, 4, 5)).getTime(),
+        schedule:(new Date(2016, 4, 25)).getTime(),
         stage:'Upper Bracket - Main event',
         countdown:""
     };
@@ -97,11 +97,45 @@ app.controller('ViewTournamentController', function($scope, $routeParams, $locat
     };
 });
 
-app.controller('ViewMatchController', function($scope, $routeParams, $location){
+app.controller('ViewMatchController', function($scope, $routeParams, $location, $interval){
     $scope.tournamentName = $routeParams.tournamentName;
     $scope.matchId = $routeParams.matchId;
-    $scope.match = $scope.tournamentName + 'match #' + $scope.matchId;
-    
+    $scope.match = {
+        matchId: 1111,
+        team1:{name:'Team Liquid', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        team2:{name:'Team Secret', icon:'https://pbs.twimg.com/profile_images/587609238479986688/OnTi5wQI.png'},
+        schedule:(new Date(2016, 4, 25)).getTime(),
+        stage:'Upper Bracket - Main event',
+        countdown:""
+    };
+
+    var intervalPromise;
+    $scope.updateTime = function(){
+        var timeDifference = ($scope.match.schedule - Date.now()) / 1000;
+        var rawDays = timeDifference / (60 * 60 * 24);
+        var daysLeft = rawDays >= 1 ? Math.floor(rawDays) : 0;
+        var rawHours = daysLeft > 0 ? (rawDays - daysLeft) * 24 : rawDays * 24;
+        var hoursLeft = rawHours >= 1 ? Math.floor(rawHours) : 0;
+        var rawMinutes = hoursLeft > 0 ? (rawHours - hoursLeft) * 60 : rawHours * 60;
+        var minutesLeft = rawMinutes >= 1 ? Math.floor(rawMinutes) : 0;
+        var rawSeconds = minutesLeft > 0 ? (rawMinutes - minutesLeft) * 60 : rawMinutes * 60;
+        var secondsLeft = Math.floor(rawSeconds);
+
+        if(daysLeft < 1 && hoursLeft < 1 && minutesLeft < 1 && secondsLeft < 1)
+        {
+            $interval.cancel(intervalPromise);
+            $scope.match.countdown = (daysLeft == 0 ? "" : daysLeft + 'D ')  + (hoursLeft == 0 ? "" : hoursLeft + 'H ') + (minutesLeft == 0 ? "" : minutesLeft + 'M ') + (secondsLeft == 0 ? "" : secondsLeft + 'S');
+            return;
+        }
+
+        $scope.match.countdown = (daysLeft == 0 ? "" : daysLeft + 'D ')  + (hoursLeft == 0 ? "" : hoursLeft + 'H ') + (minutesLeft == 0 ? "" : minutesLeft + 'M ') + (secondsLeft == 0 ? "" : secondsLeft + 'S');
+    }
+
+    var countDownLimit = Math.round(($scope.match.schedule - Date.now()) / 1000);
+    debugger;
+
+    intervalPromise = $interval($scope.updateTime, 1000, countDownLimit);
+
     $scope.backToViewTournament = function (){
         $location.path('ViewTournament' + '/' + $scope.tournamentName);
     };

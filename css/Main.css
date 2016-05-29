@@ -346,6 +346,8 @@ body {
     width:900px;
     height:70px;
     clear:both;
+    margin-top:5px;
+    margin-bottom:5px;
 }
 
 .match_details_matchname_div{
@@ -444,4 +446,15 @@ body {
 .match_details_team_separator{
     font-family:"Segoe UI";
     font-size:150%;
+}
+
+.match_details_title_strip3{
+    width:900px;
+    height:700px;
+}
+
+.match_details_strip3_video_div{
+    width:630px;
+    height:430px;
+    padding:15px;
 }

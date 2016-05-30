@@ -457,4 +457,13 @@ body {
     width:630px;
     height:430px;
     padding:15px;
+    margin: 0px;
+    float:left;
+}
+
+.match_details_strip3_vertical_div{
+    width:240px;
+    height:460px;
+    float:left;
+    background-color: #b5d592;
 }
